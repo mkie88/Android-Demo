@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Demo.iml" filepath="$PROJECT_DIR$/Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/android-demo.iml" filepath="$PROJECT_DIR$/.idea/android-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/loancalculator/loancalculator.iml" filepath="$PROJECT_DIR$/loancalculator/loancalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weatherapp/weatherapp.iml" filepath="$PROJECT_DIR$/weatherapp/weatherapp.iml" />
     </modules>
   </component>
 </project>

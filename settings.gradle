@@ -1,1 +1,1 @@
-include ':app', ':loancalculator'
+include ':app', ':loancalculator', ':weatherapp'

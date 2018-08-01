@@ -15,14 +15,32 @@
 
 package com.mike.loancalculator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class LoanActivity extends AppCompatActivity {
+
+    private long delay = 1000;
+    private TimerTask task = new TimerTask(){
+        @Override
+        public void run(){
+            startActivity(new Intent(LoanActivity.this, activity_calculator.class));
+            finish();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loan);
+
+        Timer timer = new Timer();
+        timer.schedule(task, delay);
+
+
     }
 }
