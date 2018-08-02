@@ -23,7 +23,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:gravity="center"
         android:orientation="horizontal"
@@ -34,7 +34,7 @@
         app:layout_constraintVertical_bias="1.0">
 
         <TableLayout
-            android:layout_width="352dp"
+            android:layout_width="350dp"
             android:layout_height="match_parent"
             android:stretchColumns="2">
 
@@ -148,6 +148,7 @@
                     android:text="@string/fixed_interest_rate" />
 
                 <ToggleButton
+                    android:id="@+id/togleButtonCompound"
                     android:layout_marginLeft="5dp"
                     android:textOff="Compound"
                     android:textOn="Fixed" />
@@ -226,7 +227,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:background="#0099CC"
                 android:orientation="horizontal"
@@ -234,7 +235,7 @@
 
                 <TextView
                     android:id="@+id/button_calculate"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:clickable="true"
@@ -245,7 +246,7 @@
 
                 <TextView
                     android:id="@+id/button_reset"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:clickable="true"
@@ -253,7 +254,20 @@
                     android:gravity="center"
                     android:onClick="OnClick"
                     android:text="@string/reset" />
+
+                <TextView
+                    android:id="@+id/button_history"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/ic_history"
+                    android:gravity="center"
+                    android:onClick="OnClick"
+                    android:text="@string/history" />
+
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

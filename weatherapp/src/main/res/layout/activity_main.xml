@@ -37,6 +37,7 @@
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_temperature"
         android:drawableRight="@drawable/ic_celcius"
+        android:drawablePadding="5dp"
         android:layout_below="@id/location"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />

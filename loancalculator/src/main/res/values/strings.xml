@@ -30,6 +30,7 @@
     <string name="default_result">0.00</string>
     <string name="calculate">Calculate</string>
     <string name="reset">Reset</string>
-    <string name="fixed_interest_rate">Fixed Interest Rate</string>
+    <string name="history">History</string>
+    <string name="fixed_interest_rate">Interest Type</string>
 
 </resources>

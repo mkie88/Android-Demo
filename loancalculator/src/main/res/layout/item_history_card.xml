@@ -18,16 +18,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity_calculator">
+    android:layout_height="wrap_content"
+    tools:context=".item_history_card">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="vertical"
-        android:padding="@dimen/default_gap"
-        tools:layout_editor_absoluteY="3dp">
+        android:padding="10dp">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -44,15 +42,10 @@
                     android:layout_height="wrap_content"
                     android:text="@string/loan_amount" />
 
-                <EditText
-                    android:id="@+id/loan_amount"
+                <TextView
+                    android:id="@+id/tvLoanAmount"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_span="2"
-                    android:inputType="numberDecimal"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp" />
+                    android:layout_height="wrap_content" />
 
             </TableRow>
 
@@ -61,20 +54,16 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/down_payment" />
 
-                <EditText
-                    android:id="@+id/down_payment"
+                <TextView
+                    android:id="@+id/tvDownPayment"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_span="2"
-                    android:inputType="numberDecimal"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp" />
+                    android:layout_height="wrap_content" />
+
             </TableRow>
 
             <TableRow
@@ -82,20 +71,15 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/term" />
 
-                <EditText
-                    android:id="@+id/term"
-                    android:layout_width="152dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="center"
-                    android:inputType="number"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp" />
+                <TextView
+                    android:id="@+id/tvTerm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -110,20 +94,15 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/annual_interest_rate" />
 
-                <EditText
-                    android:id="@+id/annual_interest_rate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="center"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:inputType="numberDecimal" />
+                <TextView
+                    android:id="@+id/tvAnnualInterestRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -143,32 +122,24 @@
                     android:layout_height="wrap_content"
                     android:text="@string/fixed_interest_rate" />
 
-                <ToggleButton
-                    android:id="@+id/togleButtonCompound"
-                    android:layout_marginLeft="5dp"
-                    android:textOff="Compound"
-                    android:textOn="Fixed" />
+                <TextView
+                    android:id="@+id/compound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
             </TableRow>
         </TableLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="#0099CC"/>
-
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/bg"
             android:padding="5dp"
             android:stretchColumns="2">
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -193,25 +164,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/total_repayment" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_repayment" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sym_double_column" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sym_double_column" />
 
-            <TextView
-                android:id="@+id/total_repayment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:singleLine="true"
-                android:text="@string/default_result" />
+                <TextView
+                    android:id="@+id/total_repayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="@string/default_result" />
 
-        </TableRow>
+            </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
@@ -262,47 +233,6 @@
             </TableRow>
         </TableLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:padding="5dp"
-            android:background="#0099CC">
-
-            <TextView
-                android:id="@+id/button_calculate"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:drawableTop="@drawable/ic_calculate"
-                android:gravity="center"
-                android:onClick="OnClick"
-                android:text="@string/calculate" />
-
-            <TextView
-                android:id="@+id/button_reset"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:drawableTop="@drawable/ic_reset"
-                android:gravity="center"
-                android:onClick="OnClick"
-                android:text="@string/reset" />
-
-            <TextView
-                android:id="@+id/button_history"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:drawableTop="@drawable/ic_history"
-                android:gravity="center"
-                android:onClick="OnClick"
-                android:text="@string/history" />
-        </LinearLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

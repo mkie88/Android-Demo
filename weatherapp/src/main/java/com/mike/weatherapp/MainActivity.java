@@ -15,6 +15,7 @@
 
 package com.mike.weatherapp;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -25,6 +26,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,14 +62,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         ivIcon = (ImageView)findViewById(R.id.icon);
+
+        new WeatherDataRetrival().execute();
     }
 
     private class WeatherDataRetrival extends AsyncTask<Void, Void, String>{
         private static final String WEATHER_SOURCE = "http://api.openweathermap.org/data/2.5/weather?APPID=82445b6c96b99bc3ffb78a4c0e17fca5&mode=json&id=1735161";
+        private ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+            progressDialog.setMessage("Retrieving...");
+            progressDialog.show();
         }
 
         @Override
@@ -114,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                     tvCloudness.setText(String.valueOf(weatherJSON.getJSONObject("clouds").getInt("all")) + "%");
 
                     final JSONObject mainJSON = weatherJSON.getJSONObject("main");
-                    tvTemperature.setText(String.valueOf(mainJSON.getDouble("temp") - 273.15));
+                    tvTemperature.setText(String.format("%.2f", mainJSON.getDouble("temp") - 273.15));
                     tvHumidity.setText(String.valueOf(mainJSON.getInt("humidity")) + "%");
 
                     final JSONArray weatherJSONArray = weatherJSON.getJSONArray("weather");
@@ -126,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception ex){
                 Log.e("Error on result", ex.getMessage());
             }
+            progressDialog.hide();
         }
 
         private int getIcon(int code){
